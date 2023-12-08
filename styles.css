@@ -37,8 +37,8 @@ section {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(19, 203, 216);
+    color: rgb(20, 205, 211);
     text-align: center;
     padding: 1em;
     position: fixed;
