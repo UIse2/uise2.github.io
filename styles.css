@@ -5,10 +5,15 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #87CEFA; /* Cambiado a un tono azul casi celeste */
     color: #fff;
     text-align: center;
     padding: 1em;
+}
+
+/* Añadido un nuevo estilo para el contenedor de la imagen */
+.header-image-container {
+    max-width: 100%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
 }
 
 nav {
@@ -40,3 +45,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
