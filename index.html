@@ -20,7 +20,7 @@
             background-color: #38b6ff;
             color: #1ba7ee;
             text-align: left;
-            padding: 10px;
+            padding: 3px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -28,14 +28,76 @@
 
         header img {
             max-height: 90px;
+            margin-right: 10px;
         }
 
         nav {
             background-color: #38b6ff;
-            padding: 10px;
+            padding: 0px;
             text-align: center;
             display: flex;
+            justify-content: space-between;
             align-items: center;
+        }
+
+        .nav-item {
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 10px;
+            border-radius: 15px;
+            background-color: #1ba7ee;
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav-item a:hover {
+            background-color: #007bb5;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1ba7ee;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            width: 300px;
+            text-align: left;
+        }
+
+        .nav-item:hover .dropdown-content {
+            display: block;
+        }
+
+        .custom-h4-container {
+            padding: 0px; /* Puedes ajustar el padding según sea necesario */
+        }
+
+        .custom-h4 {
+            font-size: 30px;
+            margin: 5px 0;
+            
+            text-align: center;
+        }
+
+        .custom-block {
+            padding: 0px;
+        }
+
+        .dropdown-content p {
+            font-size: 14px;
+            margin-bottom: 5px; /* Añade un poco de espacio en la parte inferior */
+            text-align: center;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 10px;
+            display: block;
         }
 
         .search-container {
@@ -52,20 +114,37 @@
         }
 
         nav input[type="search"] {
-            padding: 9px;
-            border: 1px solid #ffffff;
-            border-radius: 20px;
-            width: 600px;
-            padding-left: 40px; /* Ajusta el espacio para la imagen de la lupa */
-            outline: none; /* Elimina el borde de enfoque */
+            padding: 10px;
+            border: 1px solid #2ac3fac7;
+            border-radius: 15px;
+            width: 500px;
+            padding-left: 50px;
+            margin-left: 300 px;
+            outline: none;
         }
 
-        nav input[type="submit"] {
-            display: none; /* Oculta el botón de buscar */
+        .user-cart-container {
+            display: flex;
+            align-items: center;
+            margin-left: 50 px; /* Mueve los elementos al lado derecho */
+        }
+
+        .user-cart-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            margin-left: 25px; /* Espacio entre los iconos de usuario y carrito */
+            cursor: pointer;
+        }
+
+        .user-cart-container img {
+            max-height: 30px;
         }
 
         section {
-            margin: 10px 0;
+            margin: 2px 0;
         }
 
         footer {
@@ -86,15 +165,52 @@
         <nav>
             <div class="search-container">
                 <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/25313.png" alt="Lupa" onclick="submitForm()">
-                <input type="search" name="search" placeholder="Buscar...">
-                <input type="submit" value="Buscar" id="submit-button">
+                <input type="search" name="search" placeholder="Que desea comprar">
+                
+            </div>
+            <div class="user-cart-container">
+                <a href="#" title="Usuario">
+                    <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/icono-en-estilo-plano-persona-del-usuario-para-el-ejemplo-vector-sitio-web-134677702-removebg-preview.png" alt="Icono Usuario">
+                    <span>Usuario</span>
+                </a>
+                <a href="#" title="Carrito">
+                    <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/png-transparent-computer-icons-shopping-cart-encapsulated-postscript-shopping-cart-angle-black-shopping-removebg-preview.png" alt="Icono Carrito">
+                    <span>Carrito</span>
+                </a>
             </div>
         </nav>
     </header>
 
     <section>
-        <h2>Contenido Principal</h2>
-        <p>Bienvenido a mi página web. Aquí puedes agregar tu contenido principal.</p>
+        <nav>
+            <div class="nav-item">
+                <a href="#">Productos por Categoría</a>
+                <div class="dropdown-content">
+                    <a href="#">Alimentos y Bebidas</a>
+                    <a href="#">Abarrotes</a>
+                    <a href="#">Agua de mesa, Gaseosas y Jugos</a>
+                    <a href="#">Avícolas</a>
+                    <a href="#">Bocadillos y Fiambres</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Promociones</a>
+                <div class="dropdown-content">
+                    <div class="custom-h4-container">
+                        <h4 class="custom-h4">2X1</h4>
+                    </div>
+                    <div class="custom-block">
+                        <p>Por compras mayores a 50 S/.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Quiénes Somos</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Contáctanos</a>
+            </div>
+        </nav>
     </section>
 
     <footer>
