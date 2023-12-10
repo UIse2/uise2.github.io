@@ -3,78 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda DonPepe</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tienda Don Pepe</title>
     <style>
-        /* Agrega estilos específicos para esta página aquí, si es necesario */
         body {
-            margin: 0; /* Elimina el margen predeterminado del cuerpo */
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/Imagen%20de%20WhatsApp%202023-10-28%20a%20las%2022.47.17_638cc995.jpg);
+            background-size: auto;
+            background-position: auto;
+            background-repeat: no-repeat;
+            color: #fff;
         }
 
         header {
+            background-color: #38b6ff;
+            color: #1ba7ee;
+            text-align: left;
+            padding: 10px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            background-color: #0bf0f0; /* Color de fondo del encabezado */
-            padding: 10px; /* Espaciado interno del encabezado */
         }
 
         header img {
-            width: 240px; /* Ancho de la imagen */
-            height: 140px; /* Altura de la imagen */
-            border-radius: 8px; /* Bordes redondeados a la imagen */
+            max-height: 90px;
+        }
+
+        nav {
+            background-color: #38b6ff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
         }
 
         .search-container {
             display: flex;
             align-items: center;
-            margin-left: auto; /* Mueve la barra de búsqueda al lado derecho del encabezado */
+            position: relative;
         }
 
-        .search-bar {
-            position: relative; /* Posición relativa para poder posicionar el rectángulo */
-            margin-left: 20px; /* Espaciado a la izquierda de la barra de búsqueda */
-        }
-
-        .search-bar input {
-            padding: 10px; /* Espaciado interno de la barra de búsqueda */
-            font-size: 16px; /* Tamaño de fuente de la barra de búsqueda */
-        }
-
-        .search-bar button {
-            background-color: #0cb7ebc3; /* Color de fondo del botón de búsqueda */
-            color: #000000; /* Color del texto del botón de búsqueda */
-            padding: 10px 20px; /* Espaciado interno del botón de búsqueda */
-            border: none;
+        .search-container img {
+            max-height: 25px;
+            position: absolute;
+            left: 10px;
             cursor: pointer;
-            font-size: 16px; /* Tamaño de fuente del botón de búsqueda */
-            border-radius: 5px; /* Bordes redondeados */
         }
 
+        nav input[type="search"] {
+            padding: 9px;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+            width: 600px;
+            padding-left: 40px; /* Ajusta el espacio para la imagen de la lupa */
+            outline: none; /* Elimina el borde de enfoque */
+        }
 
-        .content {
-            padding: 20px;
+        nav input[type="submit"] {
+            display: none; /* Oculta el botón de buscar */
+        }
+
+        section {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #38b6ff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <!-- Reemplaza la URL del logo con la de tu imagen -->
-        <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/logotienda.jpg" alt="Precios Bajos">
-        <div class="search-container">
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-                <button>&#128269;</button> <!-- Lupa Unicode -->
+        <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/logotienda.jpg" alt="Logo">
+        <nav>
+            <div class="search-container">
+                <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/25313.png" alt="Lupa" onclick="submitForm()">
+                <input type="search" name="search" placeholder="Buscar...">
+                <input type="submit" value="Buscar" id="submit-button">
             </div>
-        </div>
+        </nav>
     </header>
 
-    <div class="content">
-        <!-- Contenido de la página irá aquí -->
-    </div>
+    <section>
+        <h2>Contenido Principal</h2>
+        <p>Bienvenido a mi página web. Aquí puedes agregar tu contenido principal.</p>
+    </section>
 
     <footer>
-        <!-- Contenido del pie de página irá aquí -->
+        <p>&copy; 2023 Bodega Unida</p>
     </footer>
+
+    <script>
+        function submitForm() {
+            document.getElementById("submit-button").click();
+        }
+    </script>
+
 </body>
 </html>
