@@ -15,15 +15,42 @@
         header {
             display: flex;
             align-items: center;
-            background-color: #f0f0f0; /* Color de fondo del encabezado */
+            background-color: #0bf0f0; /* Color de fondo del encabezado */
             padding: 10px; /* Espaciado interno del encabezado */
         }
 
         header img {
-            width: 220px; /* Ancho de la imagen */
-            height: 160px; /* Altura de la imagen */
+            width: 240px; /* Ancho de la imagen */
+            height: 140px; /* Altura de la imagen */
             border-radius: 8px; /* Bordes redondeados a la imagen */
         }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* Mueve la barra de búsqueda al lado derecho del encabezado */
+        }
+
+        .search-bar {
+            position: relative; /* Posición relativa para poder posicionar el rectángulo */
+            margin-left: 20px; /* Espaciado a la izquierda de la barra de búsqueda */
+        }
+
+        .search-bar input {
+            padding: 10px; /* Espaciado interno de la barra de búsqueda */
+            font-size: 16px; /* Tamaño de fuente de la barra de búsqueda */
+        }
+
+        .search-bar button {
+            background-color: #0cb7ebc3; /* Color de fondo del botón de búsqueda */
+            color: #000000; /* Color del texto del botón de búsqueda */
+            padding: 10px 20px; /* Espaciado interno del botón de búsqueda */
+            border: none;
+            cursor: pointer;
+            font-size: 16px; /* Tamaño de fuente del botón de búsqueda */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
 
         .content {
             padding: 20px;
@@ -33,7 +60,13 @@
 <body>
     <header>
         <!-- Reemplaza la URL del logo con la de tu imagen -->
-        <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/logotienda.jpg" alt="Descripción de la imagen">
+        <img src="https://raw.githubusercontent.com/UIse2/uise2.github.io/main/imagenes/logotienda.jpg" alt="Precios Bajos">
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>&#128269;</button> <!-- Lupa Unicode -->
+            </div>
+        </div>
     </header>
 
     <div class="content">
